@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Ohrxw">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/08/15/crypto/crypto1.jpg">
-<meta property="og:updated_time" content="2019-08-15T07:50:59.190Z">
+<meta property="og:updated_time" content="2019-08-15T07:55:50.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="crypto">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/15/crypto/crypto1.jpg">
@@ -241,7 +241,7 @@
                 
               
 
-              <time title="创建时间：2019-08-15 15:04:44 / 修改时间：15:50:59" itemprop="dateCreated datePublished" datetime="2019-08-15T15:04:44+08:00">2019-08-15</time>
+              <time title="创建时间：2019-08-15 15:04:44 / 修改时间：15:55:50" itemprop="dateCreated datePublished" datetime="2019-08-15T15:04:44+08:00">2019-08-15</time>
             </span>
           
             
@@ -272,7 +272,7 @@
 <p>原先：KPBELNACZDTRXMJQOYHGVSFUWI 旋转：NACZDTRXMJQOYHGVSFUWIKPBEL 同理下面的字符串也可以利用同样的方式进行解密 最终的解密为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt; NACZDTRXMJQOYHGVSFUWIKPBEL &lt;</span><br><span class="line">&lt; FHTEQGYXPLOCKBDMAIZVRNSJUW &lt;</span><br><span class="line">&lt; QGWTHSPYBXIZULVKMRAFDCEONJ &lt;</span><br><span class="line">&lt; KCPMNZQWXYIHFRLABEUOTSGJVD &lt;</span><br><span class="line">&lt; SXCDERFVBGTYHNUMKILOPJZQAW &lt;</span><br><span class="line">&lt; EIURYTASBKJDFHGLVNCMXZPQOW &lt;</span><br><span class="line">&lt; VUBMCQWAOIKZGJXPLTDSRFHENY &lt;</span><br><span class="line">&lt; OSFEZWAXJGDLUBVIQHKYPNTCRM &lt;</span><br><span class="line">&lt; QNOZUTWDCVRJLXKISEFAPMYGHB &lt;</span><br><span class="line">&lt; OWTGVRSCZQKELMXYIHPUDNAJFB &lt;</span><br><span class="line">&lt; FCUKTEBSXQYIZMJWAORPLNDVHG &lt;</span><br><span class="line">&lt; NBVCXZQWERTPOIUYALSKDJFHGM &lt;</span><br><span class="line">&lt; PNYCJBFZDRUSLOQXVETAMKGHIW &lt;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">可以观察出倒数第六列为flag</span><br><span class="line"></span><br><span class="line">###### RSA</span><br><span class="line"></span><br><span class="line">已知p,q,e求d的python脚本</span><br></pre></td></tr></table></figure>
 
-<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="coding = utf-8"></a>coding = utf-8</h1><p>def computeD(fn, e):<br>    (x, y, r) = extendedGCD(fn, e)<br>    #y maybe &lt; 0, so convert it<br>    if y &lt; 0:<br>        return fn + y<br>    return y</p>
+<p>#coding = utf-8<br>def computeD(fn, e):<br>    (x, y, r) = extendedGCD(fn, e)<br>    #y maybe &lt; 0, so convert it<br>    if y &lt; 0:<br>        return fn + y<br>    return y</p>
 <p>def extendedGCD(a, b):<br>    #a<em>xi + b</em>yi = ri<br>    if b == 0:<br>        return (1, 0, a)<br>    #a<em>x1 + b</em>y1 = a<br>    x1 = 1<br>    y1 = 0<br>    #a<em>x2 + b</em>y2 = b<br>    x2 = 0<br>    y2 = 1<br>    while b != 0:<br>        q = a / b<br>        #ri = r(i-2) % r(i-1)<br>        r = a % b<br>        a = b<br>        b = r<br>        #xi = x(i-2) - q<em>x(i-1)<br>        x = x1 - q</em>x2<br>        x1 = x2<br>        x2 = x<br>        #yi = y(i-2) - q<em>y(i-1)<br>        y = y1 - q</em>y2<br>        y1 = y2<br>        y2 = y<br>    return(x1, y1, a)</p>
 <p>p = 473398607161<br>q = 4511491<br>e = 17<br>n = p * q<br>fn = (p - 1) * (q - 1)<br>d = computeD(fn, e)<br>print d</p>
 <pre><code></code></pre>
@@ -429,7 +429,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#轮转机密码or转盘密码"><span class="nav-number">1.</span> <span class="nav-text">轮转机密码or转盘密码</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number"></span> <span class="nav-text">coding = utf-8</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#轮转机密码or转盘密码"><span class="nav-number">1.</span> <span class="nav-text">轮转机密码or转盘密码</span></a></li></ol></div>
             
 
           </div>
