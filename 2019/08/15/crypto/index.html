@@ -58,31 +58,31 @@
   };
 </script>
 
-  <meta name="description" content="Love the world">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ohrxw">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="crypto">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/crypto/index.html">
 <meta property="og:site_name" content="Ohrxw">
-<meta property="og:description" content="Love the world">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/08/15/crypto/crypto1.jpg">
+<meta property="og:updated_time" content="2019-08-15T07:38:58.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ohrxw">
-<meta name="twitter:description" content="Love the world">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="crypto">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/15/crypto/crypto1.jpg">
+  <link rel="canonical" href="http://yoursite.com/2019/08/15/crypto/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Ohrxw</title>
+  <title>crypto | Ohrxw</title>
   
 
 
@@ -199,10 +199,11 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-home">
+          <div id="content" class="content page-post-detail">
             
-  <section id="posts" class="posts-expand">
-      
+
+  <div id="posts" class="posts-expand">
+    
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
@@ -223,9 +224,8 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/15/crypto/" class="post-title-link" itemprop="url">crypto</a>
+          <h1 class="post-title" itemprop="name headline">crypto
+
             
           </h1>
         
@@ -260,18 +260,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="/2019/08/15/crypto/crypto1.jpg" alt="avatar"></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/15/crypto/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+        <p><img src="/2019/08/15/crypto/crypto1.jpg" alt="avatar"></p>
+<a id="more"></a>
+
+<h6 id="轮转机密码or转盘密码"><a href="#轮转机密码or转盘密码" class="headerlink" title="轮转机密码or转盘密码"></a>轮转机密码or转盘密码</h6><p>大概是这个样子的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1:  &lt; ZWAXJGDLUBVIQHKYPNTCRMOSFE &lt;</span><br><span class="line">2:  &lt; KPBELNACZDTRXMJQOYHGVSFUWI &lt;</span><br><span class="line">3:  &lt; BDMAIZVRNSJUWFHTEQGYXPLOCK &lt;</span><br><span class="line">4:  &lt; RPLNDVHGFCUKTEBSXQYIZMJWAO &lt;</span><br><span class="line">5:  &lt; IHFRLABEUOTSGJVDKCPMNZQWXY &lt;</span><br><span class="line">6:  &lt; AMKGHIWPNYCJBFZDRUSLOQXVET &lt;</span><br><span class="line">7:  &lt; GWTHSPYBXIZULVKMRAFDCEONJQ &lt;</span><br><span class="line">8:  &lt; NOZUTWDCVRJLXKISEFAPMYGHBQ &lt;</span><br><span class="line">9:  &lt; XPLTDSRFHENYVUBMCQWAOIKZGJ &lt;</span><br><span class="line">10: &lt; UDNAJFBOWTGVRSCZQKELMXYIHP &lt;</span><br><span class="line">11： &lt; MNBVCXZQWERTPOIUYALSKDJFHG &lt;</span><br><span class="line">12： &lt; LVNCMXZPQOWEIURYTASBKJDFHG &lt;</span><br><span class="line">13： &lt; JZQAWSXCDERFVBGTYHNUMKILOP &lt;</span><br></pre></td></tr></table></figure>
+
+<p>密钥为：2，3，7，5，13,12,9，1，8，10，4，11，6 密文为：NFQKSEVOQOFNP</p>
+<p>第一部分为加密表，第二部分为密钥，第三部分为密文 加密表就是我们需要利用密钥和密文来进行加密</p>
+<p>具体的过程如下： 首先查看密钥第一个字符为2，因此我们需要到加密表中去查找第2行的数据<code>2: &lt; KPBELNACZDTRXMJQOYHGVSFUWI &lt;</code>这里我们再利用密文的第一个字符N进行旋转，N在这里的作用就是旋转过后的第一个字符即为N，在这里的旋转为循环，不为补0 因此我们可以来对加密表中的第一段密文进行解密： </p>
+<p>原先：KPBELNACZDTRXMJQOYHGVSFUWI 旋转：NACZDTRXMJQOYHGVSFUWIKPBEL 同理下面的字符串也可以利用同样的方式进行解密 最终的解密为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt; NACZDTRXMJQOYHGVSFUWIKPBEL &lt;</span><br><span class="line">&lt; FHTEQGYXPLOCKBDMAIZVRNSJUW &lt;</span><br><span class="line">&lt; QGWTHSPYBXIZULVKMRAFDCEONJ &lt;</span><br><span class="line">&lt; KCPMNZQWXYIHFRLABEUOTSGJVD &lt;</span><br><span class="line">&lt; SXCDERFVBGTYHNUMKILOPJZQAW &lt;</span><br><span class="line">&lt; EIURYTASBKJDFHGLVNCMXZPQOW &lt;</span><br><span class="line">&lt; VUBMCQWAOIKZGJXPLTDSRFHENY &lt;</span><br><span class="line">&lt; OSFEZWAXJGDLUBVIQHKYPNTCRM &lt;</span><br><span class="line">&lt; QNOZUTWDCVRJLXKISEFAPMYGHB &lt;</span><br><span class="line">&lt; OWTGVRSCZQKELMXYIHPUDNAJFB &lt;</span><br><span class="line">&lt; FCUKTEBSXQYIZMJWAORPLNDVHG &lt;</span><br><span class="line">&lt; NBVCXZQWERTPOIUYALSKDJFHGM &lt;</span><br><span class="line">&lt; PNYCJBFZDRUSLOQXVETAMKGHIW &lt;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">可以观察出倒数第六列为flag</span><br><span class="line"></span><br><span class="line">###### RSA</span><br><span class="line"></span><br><span class="line">已知p,q,e求d的python脚本</span><br></pre></td></tr></table></figure>
+
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="coding = utf-8"></a>coding = utf-8</h1><p>def computeD(fn, e):<br>    (x, y, r) = extendedGCD(fn, e)<br>    #y maybe &lt; 0, so convert it<br>    if y &lt; 0:<br>        return fn + y<br>    return y</p>
+<p>def extendedGCD(a, b):<br>    #a<em>xi + b</em>yi = ri<br>    if b == 0:<br>        return (1, 0, a)<br>    #a<em>x1 + b</em>y1 = a<br>    x1 = 1<br>    y1 = 0<br>    #a<em>x2 + b</em>y2 = b<br>    x2 = 0<br>    y2 = 1<br>    while b != 0:<br>        q = a / b<br>        #ri = r(i-2) % r(i-1)<br>        r = a % b<br>        a = b<br>        b = r<br>        #xi = x(i-2) - q<em>x(i-1)<br>        x = x1 - q</em>x2<br>        x1 = x2<br>        x2 = x<br>        #yi = y(i-2) - q<em>y(i-1)<br>        y = y1 - q</em>y2<br>        y1 = y2<br>        y2 = y<br>    return(x1, y1, a)</p>
+<p>p = 473398607161<br>q = 4511491<br>e = 17<br>n = p * q<br>fn = (p - 1) * (q - 1)<br>d = computeD(fn, e)<br>print d</p>
+<pre><code></code></pre>
     </div>
 
     
@@ -279,195 +283,50 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/如何美化博客（持续更新）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ohrxw">
-      <meta itemprop="description" content="Love the world">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ohrxw">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/08/如何美化博客（持续更新）/" class="post-title-link" itemprop="url">如何美化博客（持续更新）</a>
-            
-          </h1>
+        <div class="post-widgets">
         
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        
 
-              
-                
+        
+          <div class="social-share">
+            
               
 
-              <time title="创建时间：2019-08-08 14:25:29" itemprop="dateCreated datePublished" datetime="2019-08-08T14:25:29+08:00">2019-08-08</time>
-            </span>
-          
-            
+
+<div class="likely">
+    <div class="twitter">Tweet</div>
+    <div class="facebook">Share</div>
+    <div class="linkedin">Link</div>
+    <div class="gplus">Plus</div>
+    <div class="vkontakte">Share</div>
+    <div class="odnoklassniki">Class</div>
+    <div class="telegram">Send</div>
+    <div class="whatsapp">Send</div>
+    <div class="pinterest">Pin</div>
+</div>
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
 
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-09 16:08:25" itemprop="dateModified" datetime="2019-08-09T16:08:25+08:00">2019-08-09</time>
-              </span>
             
-          
-
-          
-
+          </div>
+        
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <p><img src="/2019/08/08/如何美化博客（持续更新）/avatar1.jpg" alt="avatar"></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/08/如何美化博客（持续更新）/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2019/08/08/如何美化博客（持续更新）/" rel="next" title="如何美化博客（持续更新）">
+                <i class="fa fa-chevron-left"></i> 如何美化博客（持续更新）
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ohrxw">
-      <meta itemprop="description" content="Love the world">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ohrxw">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a href="/2019/08/05/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+          <span class="post-nav-divider"></span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-08-05 18:23:36" itemprop="dateCreated datePublished" datetime="2019-08-05T18:23:36+08:00">2019-08-05</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-08 15:19:20" itemprop="dateModified" datetime="2019-08-08T15:19:20+08:00">2019-08-08</time>
-              </span>
-            
-          
-
-          
-
+          <div class="post-nav-prev post-nav-item">
+          </div>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="/2019/08/05/hello-world/huahua.jpg" alt="avatar"></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/08/05/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
     </footer>
   </div>
   
@@ -475,14 +334,12 @@
   
   </article>
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
 
         </div>
           
@@ -497,8 +354,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -553,6 +419,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#轮转机密码or转盘密码"><span class="nav-number">1.</span> <span class="nav-text">轮转机密码or转盘密码</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#coding-utf-8"><span class="nav-number"></span> <span class="nav-text">coding = utf-8</span></a></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -674,6 +557,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
   <script type="text/javascript" color="148,0,211" opacity='0.3' zIndex="-2" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 </body>
 </html>
