@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="Ohrxw">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/09/05/data-structure/morning.jpg">
-<meta property="og:updated_time" content="2019-09-18T04:20:51.103Z">
+<meta property="og:updated_time" content="2019-09-18T12:06:36.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="data structure">
 <meta name="twitter:image" content="http://yoursite.com/2019/09/05/data-structure/morning.jpg">
@@ -252,7 +252,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-18 12:20:51" itemprop="dateModified" datetime="2019-09-18T12:20:51+08:00">2019-09-18</time>
+                <time title="修改时间：2019-09-18 20:06:36" itemprop="dateModified" datetime="2019-09-18T20:06:36+08:00">2019-09-18</time>
               </span>
             
           
@@ -281,14 +281,22 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">List Delete( List L, ElementType minD, ElementType maxD )</span><br><span class="line">&#123;</span><br><span class="line">    int count=0;</span><br><span class="line">    int i;</span><br><span class="line">    for(i=0;i&lt;=(*L).Last-count;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if((*L).Data[i+count]&gt;minD&amp;&amp;(*L).Data[i+count]&lt;maxD)</span><br><span class="line">        &#123;</span><br><span class="line">         count++;</span><br><span class="line">        //(*L).Data[i]=(*L).Data[i+count];</span><br><span class="line">        i--;</span><br><span class="line">        &#125;</span><br><span class="line">        else (*L).Data[i]=(*L).Data[i+count];</span><br><span class="line">    &#125;</span><br><span class="line">    (*L).Last-=count;</span><br><span class="line">    return L;</span><br><span class="line">&#125;//ps:(*L).Data可改为L-&gt;Data;</span><br></pre></td></tr></table></figure>
 
 <p>遇到的问题：<br>1.没仔细看题以为 删除大于等于0小于等于4的数后来对比他人代码发现是大于0小于4<br>2.一开始不懂为何 typedef struct LNode <em>List<br>查资料知道</em>p的p代表地址 qaq指针没学好哇<br>3.Position Last;  // 保存线性表中最后一个元素的位置<br>Last是下标下标下标！ 这个我真的是阅读理解的问题了<br>4.还有就是一开始思路就不清晰 count＋i啥的数着数着就乱了</p>
-<h5 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h5><h6 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h6><p>19年9月18日 T-T 终于学到链表啦（其实上个星期就学了，一直偷懒没有更），我又开始好怂啊 啊那就慢慢克服吧，最近天变凉了，如果有人看到我的博客的话记得添衣。<br>首先是链表的定义</p>
+<h5 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h5><h6 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h6><p>19年9月18日 T-T 终于学到链表啦（其实上个星期就学了，一直偷懒没有更），我又开始好怂啊 啊那就慢慢克服吧，最近天变凉了，如果有人看到我的博客的话记得添衣,最近everyting goes wrong,坏运坏运快走开。<br>首先是链表的定义</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">typedef struct LNode</span><br><span class="line">&#123;</span><br><span class="line">    ElemType data;</span><br><span class="line">    struct LNode *next;</span><br><span class="line">&#125;LNode,*LinkList;</span><br></pre></td></tr></table></figure>
 
 <p>直到今天才搞懂这个定义啥意思<br><a href="https://www.runoob.com/cprogramming/c-structures.html" target="_blank" rel="noopener">结构体基础</a>  <a href="https://www.cnblogs.com/liangbo-1024/p/9188497.html" target="_blank" rel="noopener">结构体自引用</a>  <a href="https://blog.csdn.net/kikilizhm/article/details/7589171" target="_blank" rel="noopener">有关链表的结构体自引用</a><br>距离学习结构体太久远加之当初也学的不精然后又看了看<br>资料都在上方<br>在这里面主要用到的就是typedef这个新用法吧<br>一开始很迷惑 之前c结构体最后花括号和分号之间的不应该是变量名嘛<br>咋后面把它当结构体标签用呢？<br>后来才直到 如果用typedef好像就可这样定义新的结构体声明<br>例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//也可以用typedef创建新类型</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    int a;</span><br><span class="line">    char b;</span><br><span class="line">    double c; </span><br><span class="line">&#125; Simple2;</span><br><span class="line">//现在可以用Simple2作为类型声明新的结构体变量</span><br><span class="line">Simple2 u1, u2[20], *u3;</span><br></pre></td></tr></table></figure>
 
 <p>不过在链表定义这里有一个值得注意的点<br>就是要把LNode先放在struct后面，这就关系到了结构体的自引用<br>因为链表的每一个结点都包含一个数据域和一个指针域<br>指针域指向下一个结点所以类型应该也是LNode类型的<br>可是我们为什么定义成LNode型的指针呢？<br>来来来开动我们的小脑袋瓜儿<br>如果定义成<code>struct LNode next</code>是错误的，因为这种声明实际上是一个无限循环，成员LNode是一个结构体，LNode的内部还会有成员是结构体，依次下去，无线循环。在分配内存的时候，由于无限嵌套，也无法确定这个结构体的长度，所以这种方式是非法的。<br>由于指针的长度是确定的（在32位机器上指针长度为4），所以编译器能够确定该结构体的长度，next的具体内容需要在实际用的时候去赋值。这样就达到了自身引用的效果。而操作系统中使用的链表的实现也就是这样来的<br>还有一个要注意的点就是 结构体内部定义指针域 用的是<code>struct LNode *next</code>而不是<code>LNode *next</code><br>这是因为这里的目的是使用typedef为结构体创建一个别名LNode。但是这里是错误的，因为类型名的作用域是从语句的结尾开始，而在结构体内部是不能使用的，因为还没定义。<br>哇 没想到就这几行代码好多要注意的呀 路漫漫其修远兮  </p>
-<h6 id="带头结点的单链表就地逆置"><a href="#带头结点的单链表就地逆置" class="headerlink" title="带头结点的单链表就地逆置"></a>带头结点的单链表就地逆置</h6>
+<h6 id="带头结点的单链表就地逆置"><a href="#带头结点的单链表就地逆置" class="headerlink" title="带头结点的单链表就地逆置"></a>带头结点的单链表就地逆置</h6><p>题目  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">本题要求编写函数实现带头结点的单链线性表的就地逆置操作函数。  </span><br><span class="line">L是一个带头结点的单链表，  </span><br><span class="line">函数ListReverse_L(LinkList &amp;L)要求在不新开辟节点的前提下将单链表中的元素进行逆置，  </span><br><span class="line">如原单链表元素依次为1,2,3,4，则逆置后为4,3,2,1。</span><br></pre></td></tr></table></figure>
+
+<p>思路：<br>除第一个元素往后的元素 依次将它们放在头结点后</p>
+<p>注意：<br>1.当元素个数&lt;=1时不需要逆序<br>2.while循环的判断条件</p>
+<p><a href="https://blog.csdn.net/Healer66/article/details/82707738" target="_blank" rel="noopener">参考</a><br>代码：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void ListReverse_L(LinkList &amp;L)</span><br><span class="line">&#123;</span><br><span class="line">    if(!L||L-&gt;next==NULL||L-&gt;next-&gt;next==NULL) return;</span><br><span class="line">    //当元素个数为0或者为1的时候不需要逆序</span><br><span class="line">    LNode *p=L-&gt;next;//p始终为第一个元素所在的地址</span><br><span class="line">    LNode *r;</span><br><span class="line">    while(p-&gt;next!=NULL)//当第一个数据不到尾部时</span><br><span class="line">    &#123;</span><br><span class="line">        r=p-&gt;next;</span><br><span class="line">        p-&gt;next=r-&gt;next;//即p-&gt;next=p-&gt;next-&gt;next;</span><br><span class="line">        //此时r游离出来</span><br><span class="line">        r-&gt;next=L-&gt;next;//将r插入头节点后</span><br><span class="line">        L-&gt;next=r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
